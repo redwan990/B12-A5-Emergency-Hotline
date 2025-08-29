@@ -1,31 +1,33 @@
 
 
-const coins = 100;
 
-    const mutCoin = document.getElementById('all-coin');
-    const reactBtn = document.getElementById('all-react');
-    const callBtn = document.getElementById('call-btn');
 
-     reactBtn.addEventListener('click', function (){
 
+
+  //    document.getElementById('call-btn').addEventListener('click', function (){
+  //  const coins = 100;
+  //      if (coins >= 20) {
+  //       coins -= 20;
+  //       return;
+  //     } else {
+  //       alert('recharge korun');
+  //     }
     
-    });
+    
+  //   });
 
-    callBtn.addEventListener('click', () => {
-      if (coins >= 20) {
-        coins -= 20; // ২০ কয়েন কাটা
-      } else {
-        alert('কয়েন যথেষ্ট নয়!');
-      }
-      updateDisplay();
-    });
+//     callBtn.addEventListener('click', () => {
+//       if (coins >= 20) {
+//         coins -= 20; // ২০ কয়েন কাটা
+//       } else {
+//         alert('কয়েন যথেষ্ট নয়!');
+//       }
+//       updateDisplay();
+//     });
 
-    function updateDisplay() {
-      coinDisplay.textContent = `Coins: ${coins}`;
-    }
-
-
-
+//     function updateDisplay() {
+//       coinDisplay.textContent = `Coins: ${coins}`;
+//     }
 
 
 
@@ -37,22 +39,32 @@ const coins = 100;
 
 
 
-//-----------------
 
-    function updateDisplay() {
+
+
+// //-----------------
+
+    function coin() {
       document.getElementById('all-coin').innerText + coins;
-    }
+ }
+
+
+document.getElementsByClassName(love).addEventListener("click",
+
 
     function addCoins() {
+
+      const coins = 100;
+      
       coins += 20;
-      updateDisplay();
-    }
+      addCoins();
+    })
 
     function cutCoins() {
       if (coins >= 20) {
         coins -= 20;
-        updateDisplay();
+        cutCoins();
       } else {
-        alert("যথেষ্ট কয়েন নেই!");
+        alert("sorry");
       }
     }
